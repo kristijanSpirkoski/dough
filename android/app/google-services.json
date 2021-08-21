@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "858393538266",
+    "project_id": "dough-16aee",
+    "storage_bucket": "dough-16aee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858393538266:android:5126c97f23f0279753bfe3",
+        "android_client_info": {
+          "package_name": "com.example.dough"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858393538266-41popfcr6u20q6t22ajumnds682tiin7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj0C2g23pDdLAT6-LyjI3eoDPjQ2fWFYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858393538266-41popfcr6u20q6t22ajumnds682tiin7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
