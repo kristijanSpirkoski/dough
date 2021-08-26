@@ -1,4 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dough/screens/home.dart';
+import 'package:dough/screens/login.dart';
 import 'package:dough/services/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -71,8 +73,10 @@ class _RootState extends State<Root> {
           if(snapshot.connectionState == ConnectionState.active) {
             if(snapshot.data?.uid == null) {
               //login screen
+              return Login(auth: _auth, firestore: _store);
             } else {
               //home screen
+              return Home(auth: _auth, firestore: _store);
             }
           } else {
             return const Scaffold(body: Center(child: Text("Loading...")));
