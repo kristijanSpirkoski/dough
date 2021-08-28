@@ -31,23 +31,26 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      // Initialize FlutterFire:
-      future: _initialization,
-      builder: (context, snapshot) {
-        // Check for errors
-        if (snapshot.hasError) {
-          return const Scaffold(body: Center(child: Text("Error")));
-        }
+    return MaterialApp(
+      theme: ThemeData.dark(),
+      home: FutureBuilder(
+        // Initialize FlutterFire:
+        future: _initialization,
+        builder: (context, snapshot) {
+          // Check for errors
+          if (snapshot.hasError) {
+            return const Scaffold(body: Center(child: Text("Error")));
+          }
 
-        // Once complete, show your application
-        if (snapshot.connectionState == ConnectionState.done) {
-          return Root();
-        }
+          // Once complete, show your application
+          if (snapshot.connectionState == ConnectionState.done) {
+            return Root();
+          }
 
-        // Otherwise, show something whilst waiting for initialization to complete
-        return const Scaffold(body: Center(child: Text("Loading...")));
-      },
+          // Otherwise, show something whilst waiting for initialization to complete
+          return const Scaffold(body: Center(child: Text("Loading...")));
+        },
+      ),
     );
   }
 }
